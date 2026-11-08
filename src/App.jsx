@@ -389,7 +389,7 @@ export default function App() {
 
         {/* SCRIPTURE BANNER */}
         <section className={styles.scriptureBanner}>
-          <div className={styles.bannerBg}></div>
+          <div className={styles.bannerB}></div>
 
           <div className={`container ${styles.bannerInner}`}>
             <Quote size={34} />
@@ -518,7 +518,7 @@ export default function App() {
                 </label>
 
                 <div className={styles.giveTypes}>
-                  {['Tithe', 'Offering', 'Missions'].map((type) => (
+                  {['Tithe', 'Offering', 'Project'].map((type) => (
                     <button
                       type="button"
                       key={type}

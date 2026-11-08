@@ -2,6 +2,7 @@ import Ministries from './components/Ministries.jsx';
 import Messages from './components/Messages.jsx';
 import Events from './components/Events.jsx';
 import React, { useState } from 'react';
+import welcomephoto from "./assets/congregation-service.jpg";
 import {
   ArrowDown,
   ArrowRight,
@@ -347,8 +348,7 @@ export default function App() {
                 <h3>Our Vision</h3>
 
                 <p>
-                  To reveal Jesus and raise glory carriers who transform
-                  lives, communities, and nations.
+                 To Cover the whole earth with the knowledge of the Glory of God until every eye sees Jesus revealed. To show how that every human can now walk with the life and authority of God on Earth as it is in Heaven. To make sure no man goes to hell because all authority has been given to us as a church to subject satan and hell to nullity by the preaching of the Gospel which is the power of God on to salvation.
                 </p>
               </article>
 
@@ -362,8 +362,7 @@ export default function App() {
                 <h3>Our Mission</h3>
 
                 <p>
-                  To make disciples through the Word, worship, prayer, and
-                  practical expressions of God's love.
+                  Our strategy to fulfilling this God given vision is to train and equip men to go into every system of the world and takeover for God’s kingdom. To have a world-class auditorium that has never been heard of in Benue state, Nigeria and the entire nations of the Earth. This way, men from every part of the world can comfortably sit and be transformed into God's plan. There is within us by the spirit, a voracious appetite to making sure what God has showed us becomes a reality.
                 </p>
               </article>
 

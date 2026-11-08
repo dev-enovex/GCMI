@@ -1,0 +1,494 @@
+
+.section {
+  --ministry-purple: #32105e;
+  --ministry-deep: #1d0b38;
+  --ministry-gold: #d5ad63;
+  --ministry-text: #332b3c;
+  --ministry-muted: #766d80;
+
+  position: relative;
+  overflow: hidden;
+  padding: 100px 24px;
+  background:
+    radial-gradient(
+      circle at 5% 10%,
+      rgba(213, 173, 99, 0.09),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #faf8fc 100%);
+  color: var(--ministry-text);
+  scroll-margin-top: 100px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  max-width: 720px;
+  margin: 0 auto 54px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-bottom: 19px;
+  color: #9b7436;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.heading h2 {
+  margin: 0;
+  color: var(--ministry-deep);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(36px, 5vw, 57px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -1.6px;
+}
+
+.heading h2 em {
+  color: #956d31;
+  font-weight: 400;
+}
+
+.heading > p {
+  max-width: 620px;
+  margin: 21px auto 0;
+  color: var(--ministry-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.ministryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  min-height: 330px;
+  flex-direction: column;
+  padding: 29px 27px 25px;
+  overflow: hidden;
+  border: 1px solid #eee7f3;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 28px rgba(41, 17, 67, 0.035);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--ministry-gold);
+  content: '';
+  transition: width 250ms ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(213, 173, 99, 0.65);
+  box-shadow: 0 18px 42px rgba(41, 17, 67, 0.09);
+}
+
+.card:hover::before {
+  width: 100%;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+
+.iconWrap {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #e9def3;
+  border-radius: 15px;
+  background: #f6f0fb;
+  color: var(--ministry-purple);
+  transition:
+    color 220ms ease,
+    background 220ms ease;
+}
+
+.card:hover .iconWrap {
+  border-color: var(--ministry-purple);
+  background: var(--ministry-purple);
+  color: #ffffff;
+}
+
+.number {
+  color: #d8cfdf;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 29px;
+}
+
+.category {
+  margin-bottom: 10px;
+  color: #98743d;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.card h3 {
+  margin: 0 0 12px;
+  color: var(--ministry-deep);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.description {
+  margin: 0 0 25px;
+  color: var(--ministry-muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.exploreButton {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 9px;
+  margin-top: auto;
+  padding: 8px 0 3px;
+  border: 0;
+  background: transparent;
+  color: var(--ministry-purple);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  transition:
+    gap 200ms ease,
+    color 200ms ease;
+}
+
+.exploreButton:hover {
+  gap: 14px;
+  color: #956d31;
+}
+
+.joinBanner {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 38px;
+  padding: 29px 32px;
+  border: 1px solid rgba(213, 173, 99, 0.25);
+  border-radius: 18px;
+  background: linear-gradient(115deg, #281044, #482078);
+  color: #ffffff;
+}
+
+.joinIcon {
+  display: grid;
+  width: 53px;
+  height: 53px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(213, 173, 99, 0.5);
+  border-radius: 50%;
+  color: #e5c17e;
+}
+
+.joinText {
+  flex: 1;
+}
+
+.joinText h3 {
+  margin: 0 0 7px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.joinText p {
+  margin: 0;
+  color: #e0d4ec;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.joinButton,
+.modalButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  flex-shrink: 0;
+  padding: 13px 19px;
+  border: 1px solid var(--ministry-gold);
+  border-radius: 8px;
+  background: var(--ministry-gold);
+  color: #241235;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  transition:
+    background 200ms ease,
+    color 200ms ease,
+    transform 200ms ease;
+}
+
+.joinButton:hover,
+.modalButton:hover {
+  transform: translateY(-2px);
+  background: #e8c984;
+}
+
+.modalBackdrop {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 22px;
+  overflow-y: auto;
+  background: rgba(20, 8, 34, 0.72);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  max-height: calc(100vh - 44px);
+  padding: 43px;
+  overflow-y: auto;
+  border: 1px solid #eee3f5;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 25px 90px rgba(0, 0, 0, 0.2);
+  animation: modalEnter 200ms ease both;
+}
+
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid #eee5f4;
+  border-radius: 50%;
+  background: #faf7fc;
+  color: var(--ministry-purple);
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: #eee5f4;
+}
+
+.modalEyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #98743d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.modal h2 {
+  margin: 0 35px 16px 0;
+  color: var(--ministry-deep);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.modalDescription {
+  margin: 0 0 27px;
+  color: var(--ministry-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.modal h3 {
+  margin: 0 0 15px;
+  color: var(--ministry-deep);
+  font-size: 14px;
+}
+
+.activityList {
+  display: grid;
+  gap: 13px;
+  margin: 0 0 29px;
+  padding: 0;
+  list-style: none;
+}
+
+.activityList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: #51465d;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.checkMark {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background: #f2e9fa;
+  color: var(--ministry-purple);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.modalButton {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 950px) {
+  .section {
+    padding: 80px 22px;
+  }
+
+  .ministryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 19px;
+  }
+
+  .card {
+    min-height: 315px;
+  }
+
+  .joinBanner {
+    flex-wrap: wrap;
+  }
+
+  .joinText {
+    min-width: 60%;
+  }
+
+  .joinButton {
+    margin-left: 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 66px 17px;
+  }
+
+  .heading {
+    margin-bottom: 35px;
+  }
+
+  .heading h2 {
+    letter-spacing: -0.8px;
+  }
+
+  .heading > p {
+    font-size: 14px;
+  }
+
+  .ministryGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 25px 23px;
+  }
+
+  .cardTop {
+    margin-bottom: 21px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .description {
+    margin-bottom: 21px;
+  }
+
+  .joinBanner {
+    align-items: flex-start;
+    gap: 15px;
+    padding: 23px 20px;
+  }
+
+  .joinIcon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .joinText {
+    min-width: 0;
+    width: calc(100% - 60px);
+  }
+
+  .joinText h3 {
+    font-size: 21px;
+  }
+
+  .joinButton {
+    width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+
+  .modal {
+    padding: 36px 24px 27px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section *,
+  .section *::before,
+  .section *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
